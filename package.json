@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "drizzle-kit": "^0.19.6",
     "@kitajs/html": "^2.2.2"
   },
   "peerDependencies": {
@@ -22,7 +21,6 @@
     "@elysiajs/static": "^0.6.0",
     "@libsql/client": "^0.3.0",
     "@paralleldrive/cuid2": "^2.2.2",
-    "drizzle-orm": "^0.27.2",
     "elysia": "^0.6.22",
     "zod": "^3.22.2"
   }

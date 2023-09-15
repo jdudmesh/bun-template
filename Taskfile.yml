@@ -7,6 +7,15 @@ vars:
     sh: pwd
 
 tasks:
+  watch/client:
+    dir: client
+    cmds:
+      - pnpm run watch
+
+  run/dev:
+    cmds:
+      - bun run --watch src/index.tsx
+
   docker/start:
     cmds:
       - docker compose -f infrastructure/local/docker-compose.yml up -d --remove-orphans
@@ -14,3 +23,14 @@ tasks:
   docker/stop:
     cmds:
       - docker compose -f infrastructure/local/docker-compose.yml down
+
+  build/client:
+    dir: client
+    cmds:
+      - pnpm run build:prod
+
+  build/server:
+    cmds:
+      - bun build --outdir ./dist --minify --target bun src/index.tsx
+    deps:
+      - build/client

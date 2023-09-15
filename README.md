@@ -31,7 +31,18 @@ bun run dev
 
 You can now browse to http://localhost:3000
 
+## Task
+There is a Taskfile.yml config if you have [task](https://taskfile.dev/) installed.
+
+For example, to build and watch the client bundle and run the `bun` server in watch mode then run the following in a shell:
+
+```bash
+task --parallel watch/client run/dev
+```
+
+There are also tasks to create prod builds as needed.
+
 ## Caddy
 There is also a Docker + Caddy configuration in `infrastructure/local`. You will need to manually install the root certificate from `infrastructure/local/caddy/data/caddy/pki/authorities/local`.
 
-If you have `task` install you can simply run `task docker/start` to fire up the Docker image. You can then browse to https://bun-template.local.
+If you have `task` installed you can simply run `task docker/start` to fire up the Docker image. You can then browse to https://bun-template.local.

@@ -1,5 +1,3 @@
-import * as elements from "typed-html"
-
 export function HomePage() {
   return (
     <div class="grow flex flex-col bg-slate-200 gap-4 justify-stretch">
