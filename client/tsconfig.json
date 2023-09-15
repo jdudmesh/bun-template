@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "dist",
+		"strict": true,
+		"lib": [
+			"DOM",
+		],
+		"moduleResolution": "node",
+		"module": "CommonJS",
+		"target": "ES6",
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": false,
+		"experimentalDecorators": true,
+		"resolveJsonModule": true,
+		"types": [
+			"node"
+		]
+	},
+	"include": [
+		"src/**/*.ts",
+	]
+}

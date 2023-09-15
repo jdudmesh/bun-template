@@ -1,0 +1,11 @@
+bun-template.local {
+	handle_path /.well-known/* {
+		root * /sites/well-known
+		file_server
+	}
+	handle {
+		reverse_proxy host.docker.internal:3000	{
+			# header_up Host localhost:3000
+		}
+	}
+}

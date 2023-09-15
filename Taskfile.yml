@@ -1,0 +1,16 @@
+version: "3"
+
+dotenv: [".env"]
+
+vars:
+  CURRENT_DIR:
+    sh: pwd
+
+tasks:
+  docker/start:
+    cmds:
+      - docker compose -f infrastructure/local/docker-compose.yml up -d --remove-orphans
+
+  docker/stop:
+    cmds:
+      - docker compose -f infrastructure/local/docker-compose.yml down

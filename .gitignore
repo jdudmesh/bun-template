@@ -1,0 +1,7 @@
+node_modules
+bun.lockb
+pnpm-lock.yaml
+*.db
+*.sqlite
+infrastructure/local/caddy/data
+static/dist/*
